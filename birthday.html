@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ailly Anongeni!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;  /* Prevents scrollbars from appearing */
+            background-image: url('https://imgur.com/LQqj3FF');
+            background-color: #ce91c996;  /* Light gray background */
+            position: relative;
+        }
+
+        #message-container {
+            position: absolute;  /* Position the container */
+            color: #333;  /* Text color */
+            width: 80%;
+            padding: 20px;
+            background-color: white;  /* Background for the message */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            top: 100%;  /* Start off-screen */
+        }
+
+        h1, h3, p {
+            font-family: sans-serif;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 4em;  /* Adjust font size as desired */
+        }
+
+        h3 {
+            font-size: 1.5em;  /* Adjust font size as desired */
+        }
+
+        /* Emoji frame styles */
+        .emoji-frame {
+            position: absolute;
+            z-index: 1;
+            font-size: 2em;  /* Adjust emoji size as needed */
+        }
+
+        .emoji-frame.top, .emoji-frame.bottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            left: 0;
+        }
+
+        .emoji-frame.top {
+            top: 0;
+        }
+
+        .emoji-frame.bottom {
+            bottom: 0;
+        }
+
+        .emoji-frame.left, .emoji-frame.right {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            top: 0;
+        }
+
+        .emoji-frame.left {
+            left: 0;
+        }
+
+        .emoji-frame.right {
+            right: 0;
+        }
+
+        #play-button {
+            position: absolute;
+            bottom: 70px; /* Adjusted to place above the bottom frame */
+            right: 50px; /* Adjusted to place near the right edge */
+            padding: 10px 20px;
+            background-color: #ff69b4; /* Pink color */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 50px;
+            transform: rotate(-45deg); /* Rotate to create heart shape */
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #play-button:before,
+        #play-button:after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background-color: #ff69b4; /* Pink color */
+            width: 50px;
+            height: 50px;
+            top: -25px;
+            left: 0;
+        }
+
+        #play-button:after {
+            left: 25px;
+            top: 0;
+        }
+
+        #play-button span {
+            display: block;
+            transform: rotate(45deg); /* Rotate back the text inside */
+        }
+
+        #play-text {
+            position: absolute;
+            bottom: 120px; /* Adjusted to place above the play button */
+            right: 70px; /* Adjusted to place near the play button */
+            font-family: sans-serif;
+            color: #ff69b4; /* Pink color */
+            font-size: 16px;
+            text-align: center;
+            width: 100px;
+            transform: rotate(-45deg); /* Rotate to create heart shape */
+        }
+
+        /* Animated colorful text styles */
+        .animated-text {
+            display: inline-block;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 70px;
+            animation: color-change 5s infinite;
+        }
+
+        @keyframes color-change {
+            0% { color: red; }
+            25% { color: rgb(10, 141, 202); }
+            50% { color: rgb(255, 0, 149); }
+            75% { color: green; }
+            100% { color: blue; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="emoji-frame top">
+        <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+        <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+        <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+    </div>
+    <div class="emoji-frame bottom">
+        <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+        <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+        <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+    </div>
+    <div class="emoji-frame left">
+        <span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span>
+        <span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span>
+        <span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span>
+    </div>
+    <div class="emoji-frame right">
+        <span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span>
+        <span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span>
+        <span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span><span>🥳</span>
+    </div>
+
+    <div id="message-container">
+        <h1>
+            <span class="animated-text">A</span>
+            <span class="animated-text">n</span>
+            <span class="animated-text">o</span>
+            <span class="animated-text">n</span>
+            <span class="animated-text">g</span>
+            <span class="animated-text">e</span>
+            <span class="animated-text">n</span>
+            <span class="animated-text">i</span>
+            <span class="animated-text"> </span>
+            <span class="animated-text">A</span>
+            <span class="animated-text">i</span>
+            <span class="animated-text">l</span>
+            <span class="animated-text">l</span>
+            <span class="animated-text">y</span>
+            <span class="animated-text"> </span><br>
+            <span class="animated-text">K</span>
+            <span class="animated-text">a</span>
+            <span class="animated-text">i</span>
+            <span class="animated-text">n</span>
+            <span class="animated-text">e</span>
+            <span class="animated-text">k</span>
+            <span class="animated-text">e</span>
+            <span class="animated-text">l</span>
+            <span class="animated-text">w</span>
+            <span class="animated-text">a</span>
+        </h1>
+        <br>
+        <h3>They say birthdays are for memories, but as for me, I will use this opportunity to appreciate and extol the remarkable individual you are🥰 From the earliest days of our childhood, you have been the epitome of a big sister😊an unwavering source of strength in my life❤️ Your boundless encouragement and steadfast belief in me have been the cornerstones upon which I have built my confidence,striving to ensure that your words never go unheeded and your encouragements never go void.  I mean, how can I not have the confidence when I know there’s someone who wholeheartedly believes that I can achieve something?</h3><br>
+        <h3>Your support system is a testament to your incredible heart❤️ and unmatched kindness. In moments of doubt and uncertainty, you have always been there to offer me words of wisdom🥺igniting a renewed sense of determination within me🥺 Your trust in my abilities has been a powerful force, pushing me to strive for greatness even when the path seemed tough. And I know you haven't been doing this just for me, because you are a very kind person who spreads love to everyone around and has a tender heart for helping those you can. 
+            You demonstrate resilience and determination in everything you do. It's from you I learned the value of hard work and the importance of perseverance, that no goal is too lofty when approached with dedication and passion.</h3><br>
+        <h3>On this special day, I wish to celebrate not just your birthday, but the profound impact you have had on my life. I want to express my deepest gratitude for all that you’ve done and continue to do. May your birthday be as extraordinary as you are, filled with joy, laughter, and the warmth of knowing how deeply you are cherished. I hope the year ahead brings you an abundance of blessings, new adventures, and moments that fill your heart with happiness.</h3><br>
+        <h3>You deserve nothing less than the very best, for you have given so much of yourself to others😊Cheers to your 22nd birthday baby🥳 May our bond continue to flourish.</h3><br>
+        <h3>Happy Birthday, dearest first niece and beloved big sister❤️</h3> 
+        <h3>With all my love and heartfelt gratitude,</h3>
+        <h3>Maria Ndina Shaanika</h3>
+    </div>
+
+    <!-- Audio element for background music -->
+    <audio id="background-music" src="https://soundcloud.com/maria-ndinomugameni/young-t-wokongha-thank-you-god-2021-single?si=ced634ef76734e379c2835c2b99e0e9e&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" autoplay loop></audio>
+
+    <!-- Love-shaped play button -->
+    <button id="play-button"><span>❚❚</span></button>
+    <div id="play-text">Play Music</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        // Create the animation
+        const animation = anime({
+            targets: '#message-container',
+            top: ['100%', '-100%'],  // Move from bottom to completely off-screen top
+            easing: 'linear',  // Linear easing for a consistent scroll
+            duration: 20000,  // Duration of the animation in milliseconds (20 seconds)
+            autoplay: true  // Start the animation automatically
+        });
+
+        // Toggle animation on touch/click
+        document.addEventListener('click', function () {
+            if (animation.paused) {
+                animation.play();
+            } else {
+                animation.pause();
+            }
+        });
+
+        // For touch devices
+        document.addEventListener('touchstart', function () {
+            if (animation.paused) {
+                animation.play();
+            } else {
+                animation.pause();
+            }
+        });
+
+        // Play button functionality
+        const playButton = document.getElementById('play-button');
+        const playText = document.getElementById('play-text');
+        const backgroundMusic = document.getElementById('background-music');
+
+        playButton.addEventListener('click', function() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                playButton.querySelector('span').textContent = '❚❚';
+            } else {
+                backgroundMusic.pause();
+                playButton.querySelector('span').textContent = '▶';
+            }
+        });
+
+        // Ensure music plays on page load after a small user interaction
+        window.addEventListener('load', function() {
+            document.body.addEventListener('click', function() {
+                backgroundMusic.play();
+                playText.style.display = 'none';
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>
